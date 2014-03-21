@@ -1,0 +1,10 @@
+Dear <%= @recipe.name %>
+
+<%= @greeting %>, find me in app/views/app/views/recipe_mailer/send_recipe.text.erb
+
+
+  <ol> <li> <%= @recipe.name %> </li> </ol>
+  <ol> <li> <%= @recipe.made_by %> </li> </ol>
+  <ol> <li> <%= @recipe.ingredients %> </li> </ol>
+  <ol> <li> <%=image_tag "http://localhost:3000/{#@recipe.image}".html_safe %> </li></ol>
+  <li><%= link_to "#{@recipe.name}" , recipe_url( @recipe ) %> </li>

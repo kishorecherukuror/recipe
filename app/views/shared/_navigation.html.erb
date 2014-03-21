@@ -1,0 +1,23 @@
+<nav><!-- top nav -->
+		<div class="menu">
+			<ul>
+				<li><%=link_to_unless_current "Home", page_home_path %></li>
+				<li><%=link_to_unless_current "About", new_recipe_path %></a></li>
+				<li><%=link_to_unless_current "Products", products_path %></li>
+				<li><%=link_to_unless_current "Recipes", store_index_path %></li>
+				<li><%=link_to_unless_current "Articles", articles_path %></li>
+				<li><%=link_to_unless_current "Faq's", page_faq_path %></li>
+				<li><%=link_to_unless_current "Contact US", page_contact_us_path %></a></li>
+				<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
+				<li><%=link_to_unless_current "Admin", recipes_path %></a></li>
+			</ul>
+		</div>
+	</nav><!-- end of top nav -->

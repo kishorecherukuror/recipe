@@ -1,0 +1,4 @@
+<h1>Home#contact_us</h1>
+<p>This is Home page</p>
+
+<%= @user %>th User we have now and his name is <%= @name %>

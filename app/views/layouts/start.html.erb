@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+  <title>kishore's 	<%= yield :title %></title>
+  <%= stylesheet_link_tag    "start", media: "screen", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "print", media: "print", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+<center>This is kishore new Application!</center>
+
+        		<article>
+<center>
+<div id="nav">
+<%if author_signed_in? %>
+   
+    Signed in as <%= current_author.email %>
+    <%= link_to 'sign out', destroy_author_session_path %>
+ <% else %>
+     <%= link_to 'sing up',new_author_registration_path %> <%= link_to 'sign in' , new_author_session_path %>
+  <% end %>
+</div>
+<%= yield %></center>
+
+</article>
+<!-- Free template created by http://freehtml5templates.com -->
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+<% content_for :title do %>
+ About Us
+<% end %>
+
+<%= render :partial => "shared/form" %>
+<br /><br />
+
+
+
+<%= @products.inspect %>
+
+<% if params[:commit] %>
+<%= show_params  %>
+<% end %>

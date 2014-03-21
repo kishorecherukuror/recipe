@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+  <title>kishore's 	<%= yield :title %></title>
+  <%= stylesheet_link_tag    "application", media: "screen", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "print", media: "print", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body style="background:#FFFF00">
+<center>This is kishore new Application!</center>
+<div id="wrapper"><!-- #wrapper -->
+
+	<%= render 'shared/navigation' %>
+	
+	<header><h1><a href="#">On The Radar <%= yield :title %></a></h1>	</header>
+	
+<section id="main"><!-- #main content and sidebar area -->
+<section id="content"><!-- #content -->
+
+
+<div style="background:#FF00EE">
+<%if params[:commit] %>
+<% if flash[:notice] %>
+   <p class="notice"><%= flash[:notice].html_safe %></p><br />
+<%end%>
+
+<% if flash[:error] %>
+  <p class="error" > <%= flash[:error].html_safe %></p><br />
+<%end%>
+<%end%>
+</div>
+        		<article>
+<%= yield %>
+</article>
+
+	</section><!-- end of #content -->
+
+		<aside id="sidebar"><!-- sidebar -->
+				<%= render 'shared/sidebar' %>
+		</aside><!-- end of sidebar -->
+
+	</section><!-- end of #main content and sidebar-->
+	
+		<footer>
+		<%= render 'shared/footer' %>
+	</footer>
+	
+</div><!-- #wrapper -->
+<!-- Free template created by http://freehtml5templates.com -->
+</body>
+</html>

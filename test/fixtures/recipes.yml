@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  made_by: MyString
+  ingredients: MyText
+  last_made: 2013-12-25 00:22:32
+  image: MyString
+  serves: 1
+  cost: 9.99
+
+two:
+  name: MyString
+  made_by: MyString
+  ingredients: MyText
+  last_made: 2013-12-25 00:22:32
+  image: MyString
+  serves: 1
+  cost: 9.99
